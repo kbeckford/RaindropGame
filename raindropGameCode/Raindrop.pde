@@ -1,13 +1,13 @@
 class Raindrop {
   PVector loc;
   PVector vel;
-  float acc=.8;
+  float acc=.2;
   float diam=30;
 
   Raindrop(float x, float y) {
     //initialize all starting values
     loc = new PVector(x, y);
-    vel = new PVector(0, 1);
+    vel = new PVector(0, .5);
   }
 
   void display() {
@@ -19,11 +19,16 @@ class Raindrop {
 
   void fall() { 
     //display the raindrop
-
-    //vel.y += acc;
+    vel.y += acc;
     loc.add(vel);
+  }
+
+boolean isInContactwith(){
+  if(loc.dist(mouse) <= diam/2){
+   return true;
+  }else{
+   return false; 
   }
 }
 
-//boolean isInContactwith()
-//}
+}
