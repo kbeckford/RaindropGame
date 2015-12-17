@@ -1,8 +1,9 @@
 class Raindrop {
   PVector loc;
   PVector vel;
-  float acc=.2;
+  float acc=.1;
   float diam=30;
+  //PImage raindrop;
 
   Raindrop(float x, float y) {
     //initialize all starting values
@@ -13,22 +14,29 @@ class Raindrop {
   void display() {
     //display your raindrop
     background(0);
-    ellipse(loc.x,loc.y, diam, diam);
+    ellipse(loc.x, loc.y, diam, diam);
     fill(204, 243, 255);
+   // raindrop=loadImage("raindrop.png");
   }
 
   void fall() { 
-    //display the raindrop
+    //make the raindrop fall
     vel.y += acc;
     loc.add(vel);
   }
 
-boolean isInContactwith(){
-  if(loc.dist(mouse) <= diam/2){
-   return true;
-  }else{
-   return false; 
+  void reset() {
+    //return the raindrop back to the top of the screen
+    //loc.set
+    //vel.set
+   // acc
   }
-}
 
+    boolean isInContactWith(PVector other) {
+    if (loc.dist(other) <= diam/2) {
+      return true;
+    } else {
+      return false;
+    }
+  }
 }
