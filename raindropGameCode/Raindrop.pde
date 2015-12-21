@@ -4,7 +4,8 @@ class Raindrop {
   float acc=.08;
   float diam=30;
   int sc=0;
-  //PImage raindrop;
+  //add new arraylist to replace a usual array-delcare and initalize the array list
+  ArrayList <Raindrop> raindrops =new ArrayList<Raindrop>();
 
   Raindrop(float x, float y) {
     //initialize all starting values
@@ -15,10 +16,9 @@ class Raindrop {
   void display() {
     //display your raindrop
     background(0);
-    fill(0, 153, 204,150);
+    fill(0, 153, 204);
     ellipse(loc.x, loc.y, diam, diam);
-    // raindrop=loadImage("raindrop.png");
-
+ 
     //create a scoreboard
     fill(255);
     rect(1050, 720, 150, 80);

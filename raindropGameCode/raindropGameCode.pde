@@ -10,6 +10,7 @@ void setup() {
   size(1200, 800);
   mouse = new PVector();                //initialize mouse PVector. value is irrelevant since it will be set at the start of void draw(){}
   r = new Raindrop(random(width), 0);   //Initialize r. The parameters used are the initial x and y position
+  
 }
 
 void draw() { 
