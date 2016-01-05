@@ -5,7 +5,7 @@ class Raindrop {
   float diam=30;
   int sc=0;
   //add new arraylist to replace a usual array-delcare and initalize the array list
-  ArrayList <Raindrop> raindrops =new ArrayList<Raindrop>();
+  
 
   Raindrop(float x, float y) {
     //initialize all starting values
@@ -15,7 +15,6 @@ class Raindrop {
 
   void display() {
     //display your raindrop
-    background(0);
     fill(0, 153, 204);
     ellipse(loc.x, loc.y, diam, diam);
  
