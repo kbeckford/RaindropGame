@@ -5,6 +5,7 @@ Raindrop r;      //declare a new Raindrop called r
 Bucket b;
 
 int sc=0; //delcare and italize variable for scoring 
+int time=100;
 
 
 
@@ -27,6 +28,15 @@ void draw() {
   text("Score:", 550, 765);
   textSize(45);
   text(sc, 610, 770);
+  
+  //create a timer
+  fill(255);
+  textSize(15);
+  textAlign(CENTER);
+  text("Time:", 550, 730);
+  fill(255,0,0);
+  textSize(45);
+  text(time, 620,730);
 
   b.display();
 
