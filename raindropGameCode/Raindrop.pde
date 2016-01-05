@@ -3,7 +3,6 @@ class Raindrop {
   PVector vel;
   float acc=.08;
   float diam=30;
-  int sc=0;
   //add new arraylist to replace a usual array-delcare and initalize the array list
   
 
@@ -18,15 +17,6 @@ class Raindrop {
     fill(0, 153, 204);
     ellipse(loc.x, loc.y, diam, diam);
  
-    //create a scoreboard
-    fill(255);
-    rect(1050, 720, 150, 80);
-    fill(0);
-    textSize(15);
-    textAlign(CENTER);
-    text("Score:", 1080, 765);
-    textSize(35);
-    text(sc, 1130,765);
   }
 
   void fall() { 
@@ -51,9 +41,9 @@ class Raindrop {
     }
   }
 
-  void score(PVector other) {
-    if (loc.dist(other) <= diam/2) {
-      sc=sc+1;
-    }
-  }
+  //void score(PVector other) {
+   // if (loc.dist(other) <= diam/2) {
+      //sc=sc+1;
+    //}
+  //}
 }
