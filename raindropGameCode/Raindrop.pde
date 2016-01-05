@@ -26,15 +26,15 @@ class Raindrop {
   }
 
   void reset() {
-    //return the raindrop back to the top of the scren at a random location.
+    //return the raindrop back to the top of the screen at a random location.
     loc.set(random(width), 0);
     vel.set(0, .5);
     acc=.1;
   }
 
-  boolean isInContactWith(PVector other) {
+  boolean isInContactWith(Bucket b) {
     //if the mouse is inside of the circle, the raindrop will return to the top
-    if (loc.dist(other) <= diam/2) {
+    if (loc.dist(b.loc) <= diam/2+b.diam/2) {
       return true;
     } else {
       return false;
