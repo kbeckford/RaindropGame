@@ -1,9 +1,8 @@
 class Raindrop {
-  PVector loc;
+  PVector loc; //create a PVector for location of velocity
   PVector vel;
-  float acc=.08;
+  float acc=.08; //initalize and define variables
   float diam=30;
-  //add new arraylist to replace a usual array-delcare and initalize the array list
   
 
   Raindrop(float x, float y) {
@@ -14,7 +13,7 @@ class Raindrop {
 
   void display() {
     //display your raindrop
-    fill(0, 153, 204);
+    fill(128, 213, 204,300);
     ellipse(loc.x, loc.y, diam, diam);
  
   }
@@ -33,7 +32,7 @@ class Raindrop {
   }
 
   boolean isInContactWith(Bucket b) {
-    //if the mouse is inside of the circle, the raindrop will return to the top
+    //if the mouse is inside of the bucket, the raindrop will return to the top
     if (loc.dist(b.loc) <= diam/2+b.diam/2) {
       return true;
     } else {
@@ -41,9 +40,4 @@ class Raindrop {
     }
   }
 
-  //void score(PVector other) {
-   // if (loc.dist(other) <= diam/2) {
-      //sc=sc+1;
-    //}
-  //}
 }
